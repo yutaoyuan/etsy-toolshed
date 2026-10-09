@@ -1,0 +1,10 @@
+# EtsyToolshed 项目规则
+
+- 技术栈：Next.js 14 App Router + TS + Tailwind + Supabase + Lemon Squeezy
+- 禁止：前端读取 PRIVATE KEY、any 类型、纯客户端 SPA 工具页、登录墙挡住试用
+- 工具页必须 SSR/SSG，必须有 H1 + metadata + JSON-LD
+- 费率/规则/提示词模板放 lib/，不写死在 UI
+- 先跑通再美化；先规则引擎再接 AI
+- 不主动做：博客后台、管理员系统、Shopify App OAuth、社媒排程
+- 涉及钱/登录/Webhook 的代码，必须写“人工需在后台配置 X”
+- 每次改完做 tsc --noEmit 和 next build 自检
